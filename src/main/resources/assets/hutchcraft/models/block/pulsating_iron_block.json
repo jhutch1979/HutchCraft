@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "hutchcraft:block/pulsating_iron_block"
+  }
+}

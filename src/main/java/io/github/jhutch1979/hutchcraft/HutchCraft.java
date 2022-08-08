@@ -1,6 +1,7 @@
 package io.github.jhutch1979.hutchcraft;
 
 import com.mojang.logging.LogUtils;
+import io.github.jhutch1979.hutchcraft.block.ModBlocks;
 import io.github.jhutch1979.hutchcraft.item.ModItems;
 
 import net.minecraft.world.level.block.Blocks;
@@ -30,6 +31,7 @@ public class HutchCraft
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         ModItems.register(eventBus);
+        ModBlocks.register(eventBus);
 
         eventBus.addListener(this::setup);
 

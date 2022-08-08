@@ -1,5 +1,7 @@
 {
   "item.hutchcraft.pulsating_iron_ingot": "Pulsating Iron Ingot",
-  "item.hutchcraft.pulsating_iron_nuget": "Pulsating Iron Nuget"
+  "item.hutchcraft.pulsating_iron_nuget": "Pulsating Iron Nuget",
+
+  "block.hutchcraft.pulsating_iron_block": "Pulsating Iron Block"
 
 }
