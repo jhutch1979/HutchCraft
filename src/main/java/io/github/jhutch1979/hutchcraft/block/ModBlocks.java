@@ -1,6 +1,7 @@
 package io.github.jhutch1979.hutchcraft.block;
 
 import io.github.jhutch1979.hutchcraft.HutchCraft;
+import io.github.jhutch1979.hutchcraft.item.ModCreativeModeTab;
 import io.github.jhutch1979.hutchcraft.item.ModItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
@@ -22,7 +23,7 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> PULSATING_IRON_BLOCK = registerBlock("pulsating_iron_block",
             () -> new Block(BlockBehaviour.Properties.of(Material.METAL)
-                    .strength(5f).requiresCorrectToolForDrops()), CreativeModeTab.TAB_MISC);
+                    .strength(1f).requiresCorrectToolForDrops()), ModCreativeModeTab.HUTCH_CRAFT_TAB);
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab){
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

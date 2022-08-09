@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "hutchcraft:pulsating_iron_ingot"
+    }
+  },
+  "result": {
+    "item": "hutchcraft:pulsating_iron_block",
+    "count": 1
+  }
+}
