@@ -10,6 +10,11 @@
 
   "itemGroup.hutchcraftmodtab": "Hutch Craft",
 
-  "item.hutchcraft.dowsing_rod.no_valubles": "No valuable blocks found"
+  "item.hutchcraft.dowsing_rod.no_valubles": "No valuable blocks found",
+
+  "tooltip.hutchcraft.dowsing_rod.shift": "Right Click to find valuables!",
+  "tooltip.hutchcraft.dowsing_rod": "press §eSHIFT§r for more information!",
+
+  "tooltip.block.speedy_block": "it gets really speedy"
 
 }

@@ -1,20 +1,24 @@
 package io.github.jhutch1979.hutchcraft.item.custom;
 
+import io.github.jhutch1979.hutchcraft.util.ModTags;
+import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.Registry;
+import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.TextComponent;
 import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
+import org.jetbrains.annotations.Nullable;
 
 
-import java.util.ArrayDeque;
-import java.util.Deque;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
 public class DowsingRodItem extends Item {
     private Player player;
@@ -60,7 +64,14 @@ public class DowsingRodItem extends Item {
 
     }
 
-
+    @Override
+    public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {
+        if(Screen.hasShiftDown()){
+            pTooltipComponents.add(new TranslatableComponent("tooltip.hutchcraft.dowsing_rod.shift"));
+        }else {
+            pTooltipComponents.add(new TranslatableComponent("tooltip.hutchcraft.dowsing_rod"));
+        }
+    }
 
     @Override
     public InteractionResult useOn(UseOnContext pContext) {
@@ -112,7 +123,7 @@ public class DowsingRodItem extends Item {
     }
 
     private boolean isValuableBlock(Block block) {
-        return block == blockType;
+        return Registry.BLOCK.getHolderOrThrow(Registry.BLOCK.getResourceKey(block).get()).is(ModTags.Blocks.DOWSING_ROD_VALUABLES);
     }
 
     private void walk(BlockPos pos, Level level) {
